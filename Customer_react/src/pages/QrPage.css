@@ -1,0 +1,68 @@
+.qr-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #fde9b5;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.qr-container h2 {
+  font-size: 26px;
+  margin-bottom: 2rem;
+  color: #333;
+  
+  border-radius: 10px;
+  padding: 1.5rem;
+  background: #f7c23b;
+}
+
+/* Grid layout for tables: 2 per row */
+.qr-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* ✅ 2 per row */
+  gap: 2rem;
+  justify-items: center;
+}
+
+/* Each QR card */
+.qr-card {
+  background: #ffffff;
+  padding: 1.2rem;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  transition: box-shadow 0.2s ease-in-out;
+  text-align: center;
+  width: 200px;
+}
+
+.qr-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Table label */
+.qr-card p {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+/* Orange button below QR */
+.qr-card a {
+  display: inline-block;
+  margin-top: 0.8rem;
+  padding: 6px 12px;
+  background: orange; /* ✅ changed to orange */
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.qr-card a:hover {
+  background: #e68a00; /* ✅ darker orange on hover */
+}

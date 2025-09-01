@@ -1,0 +1,14 @@
+.app-container {
+  padding-left: 40px;   /* 🔥 Add global padding */
+  padding-right: 40px;   /* 🔥 Add global padding */
+  max-width: 1300px;
+  margin: 0 auto;  /* center the content */
+}
+.dashboard-title {
+  background-color: orange;   /* 🔥 Orange background */
+  color: white;               /* White text */
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 20px;
+}

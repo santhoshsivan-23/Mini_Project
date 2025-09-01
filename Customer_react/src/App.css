@@ -1,0 +1,7 @@
+.app-container {
+  max-width: 1200px;   /* Keeps content centered */
+  margin: 0 auto;      /* Centers horizontally */
+  padding-left: 40px;       /* Main padding */
+   padding-right: 40px;       /* Main padding */
+  font-family: Arial, sans-serif;
+}

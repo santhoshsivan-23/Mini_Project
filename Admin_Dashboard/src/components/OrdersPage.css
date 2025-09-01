@@ -1,0 +1,118 @@
+/* Status Row
+.orders-container .status-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0.3rem 0;
+}
+
+.orders-container .status-label {
+  font-weight: bold;
+  color: #333;
+}
+
+.orders-container .status {
+  font-weight: bold;
+  text-transform: capitalize;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.orders-container .status.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.orders-container .status.preparing {
+  background: #cce5ff;
+  color: #004085;
+}
+
+.orders-container .status.served {
+  background: #d4edda;
+  color: #155724;
+}
+
+.orders-container .status.completed {
+  background: #c3e6cb;
+  color: #155724;
+}
+
+.orders-container .status.cancelled {
+  background: #f8d7da;
+  color: #721c24;
+} */
+.orders-container {
+  padding: 20px;
+}
+
+.orders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.order-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.order-card:hover {
+  transform: translateY(-4px);
+}
+
+.order-card h4 {
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.status-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.status-label {
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.status {
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+.status.pending {
+  background: #fceabb;
+  color: #b58900;
+}
+
+.status.preparing {
+  background: #66ecf1;
+  color: #195967;
+}
+
+.status.served {
+  background: #78f593;
+  color: #1e8636;
+}
+
+.items-list {
+  margin: 0;
+  padding-left: 18px;
+  list-style: disc;
+}
+
+.total {
+  display: block;
+  margin-top: 12px;
+  font-size: 1.1rem;
+  color: #000;
+}

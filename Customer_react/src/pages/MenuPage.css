@@ -1,0 +1,221 @@
+/* ====== Page Layout ====== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f9fa;
+}
+
+/* ====== Header 1: Food Menu ====== */
+/* ====== Header 1: Food Menu ====== */
+.menu-header {
+  background-color: orange;
+  color: white;
+  padding: 3px 10px;   /* ✅ reduced padding */
+  text-align: center;
+  font-size: 16px;     /* ✅ slightly smaller font */
+  font-weight: bold;
+  border-radius: 0 0 12px 12px;
+  margin-bottom: 8px;
+}
+
+/* ====== Header 2: Table & Orders ====== */
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffe0b2; /* light orange */
+  color: #333;
+  border-radius: 8px;
+  margin: 0 20px 16px 20px; /* horizontal spacing */
+}
+
+.table-header span {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.orders-btn {
+  background-color: orange;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+  font-size: 20px;
+}
+
+.orders-btn:hover {
+  background-color: #e68a00;
+}
+
+/* ====== Menu Grid ====== */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 0 20px 20px 20px;
+}
+
+.menu-card {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Square product images */
+.menu-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.menu-name {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+.menu-price {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.add-btn {
+  background: #28a745;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.add-btn:hover {
+  background: #218838;
+}
+
+/* ====== Cart ====== */
+.cart-container {
+  margin: 20px;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cart-container h3 {
+  margin-bottom: 10px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-item span:first-child {
+  flex: 1; /* product name takes left side neatly */
+  font-weight: 500;
+}
+
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.qty-controls button {
+  padding: 4px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.qty-controls button:first-child {
+  background: #dc3545;
+  color: white;
+}
+
+.qty-controls button:last-child {
+  background: #28a745;
+  color: white;
+}
+
+.cart-item span:last-child {
+  min-width: 60px;
+  text-align: right;
+  font-weight: bold;
+  color: #333;
+}
+
+/* ====== Fixed Cart Total Bar ====== */
+/* ====== Fixed Cart Total Bar ====== */
+.total-bar {
+  bottom: 0;
+  left: 0;               /* start from left edge */
+  right: 0;              /* extend to right edge */
+  margin: 0 20px 20px;   /* spacing from edges */
+  background: orange;
+  color: white;
+  padding: 8px 14px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;         /* ensure on top of all content */
+}
+
+
+.place-order-btn {
+  background: #007bff;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.place-order-btn:hover {
+  background: #0056b3;
+}
+
+/* ====== Responsive ====== */
+@media screen and (max-width: 1024px) {
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+  .table-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
